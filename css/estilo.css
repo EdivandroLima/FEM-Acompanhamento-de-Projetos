@@ -1,0 +1,254 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;	
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 400;
+	color: hsl(231, 7%, 65%);
+	overflow-x: hidden
+}
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box
+}
+
+/* Tipografia
+---------------*/
+a {
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s
+}
+h1 {
+	margin: 15px 0;
+	font-size: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: hsl(230, 29%, 20%)
+}
+p {
+	font-size: 20px
+}
+@media (max-width: 700px) {
+	h1 {
+		font-size: 35px
+	}
+}
+
+/* Colunas 
+-------------*/
+.col-1, .col-2, .col-3 {
+	width: 50%;
+}
+.col-1 {
+	float: left;
+	padding: 50px 100px;
+	padding-left: 150px
+}
+.col-2 {
+	float: right
+}
+.col-3 {
+	padding: 200px 80px 50px 150px
+}
+@media (max-width: 900px) {
+	.col-1 {
+		padding: 30px 15px
+	}
+	.col-3 {
+		width: 100%;
+		padding: 50px 15px;
+		clear: both
+	}
+	.i-dispositivos {
+		margin-top: 100px;
+		float: left;
+		margin-left: -100%;
+		width: 110vw
+	}
+}
+
+/* Cabeçalho 
+---------------*/
+.list-unstyled {
+	padding: 0;
+	margin: 0;
+	list-style: none
+}
+.list-item {
+	display: inline-block
+}
+.list-link {
+	color: hsl(230, 29%, 20%);
+	margin: 0 20px;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	position: relative;
+	padding-bottom: 3px;
+	text-transform: uppercase
+}
+.list-link.entrar {
+	color: hsl(231, 7%, 65%)
+}
+.list-link span {
+	height: 2px;
+	background: hsl(0, 100%, 68%);
+	position: absolute;
+	width: 0%;
+	left: 50%;
+	bottom: 0;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s
+}
+.list-link:hover span {
+	width: 100%;
+	left: 0
+}
+.list-link.entrar span {
+	background: hsl(0, 100%, 78%)
+}
+.divider {
+	display: inline-block;
+	padding: 2px;
+	margin: 0 10px;
+	background: hsl(231, 7%, 65%);
+	vertical-align: middle;
+	border-radius: 50%
+}
+.nav {
+	text-align: center;
+	padding: 55px 0px;
+	height: 400px;
+	background: hsl(207, 33%, 95%);
+	border-bottom-left-radius: 70px
+}
+.i-dispositivos {
+	margin-top: 100px;
+	float: left
+}
+
+/* Open menu 
+--------------*/
+#btn-menu {
+	display: none
+}
+@media (max-width: 800px) {
+	.nav {
+		padding: 30px 15px;
+		text-align: right
+	}
+	#btn-menu {
+		display: inline-block;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		width: 40px;
+		height: 25px
+	}
+	.list-item {
+		display: block;
+		padding: 10px
+	}
+	.list-link {
+		font-size: 20px
+	}
+	.divider {
+		height: 1px;
+		width: 60%;
+		padding: 0
+	}
+	.navbar-collapse {
+		position: absolute;
+		text-align: center;
+		background: white;
+		padding: 30px;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 0 2em rgba(0,0,0, .2);
+		        box-shadow: 0 0 2em rgba(0,0,0, .2);
+		height: 0;
+		width: 0;
+		max-width: 300px;
+		visibility: hidden;
+		right: -30px;
+		opacity: 0;
+		-webkit-transition: opacity .2s;
+		-o-transition: opacity .2s;
+		transition: opacity .2s
+	}
+	.open-menu {
+		height: auto;
+		width: 70%;
+		right: 15%;
+		visibility: visible;
+		opacity: 1
+	}
+}
+
+/* Novo
+----------*/
+.novo {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 14px;
+}
+.novo span {
+	letter-spacing: 1px;
+	background: hsl(230, 29%, 20%);
+	color: white;
+	padding: 3px 8px;
+	border-radius: 20px;
+	margin-right: 15px;
+	font-weight: 700;
+	font-size: 12px
+}
+
+/* Agendar Demo 
+------------------*/
+.agenda-demo {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 14px;
+	margin-top: 50px;
+	margin-right: -50px
+}
+.agenda-demo a {
+	padding: 13px 20px;
+	background: hsl(0, 100%, 68%);
+	color: white;
+	border-radius: 4px;
+	display: inline-block;
+	letter-spacing: 1px;
+	margin-right: 10px;
+	font-weight: 700
+}
+.agenda-demo a:hover {
+	background: hsl(0, 100%, 78%)
+}
+@media (max-width: 1200px) {
+	.agenda-demo span  {
+		display: block;
+		margin-top: 10px
+	}
+}
+
+/* Rodapé
+-----------*/
+footer {
+	padding: 50px 15px 8px 15px;
+	text-align: center
+}
+footer p {
+	font-size: 14px;
+	color: hsl(230, 11%, 40%)
+}
+footer a {
+	color: hsl(230, 11%, 40%)
+}
+@media (max-width: 700px) {
+	footer {
+		padding-top: 15px
+	}
+}

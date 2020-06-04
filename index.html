@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- Estilo Customizado -->
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>Componente de introdução ao acompanhamento de projetos</title>
+</head>
+<body>
+    <header>
+        <div class="container"><!-- Container -->
+            <nav class="navbar"><!-- Navbar -->
+                <div class="col-1">
+                    <a href="#"><img src="./img/logo.svg" alt="Acompanhamento de Projetos"></a>
+                </div>
+                <div class="col-2"><!-- Col 2 -->
+                    <div class="nav">
+                        <button type="button" onclick="open_menu()" id="btn-menu" class=""><img src="./img/icon-hamburger.svg" alt="Menu" id="img-menu"></button>
+                        <div class="navbar-collapse" id="navbar-collapse"><!-- Collapse -->
+                            <ul class="list-unstyled">
+                                <li class="list-item">
+                                    <a href="#" class="list-link">Produtos<span></span></a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="list-link">Recursos<span></span></a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#" class="list-link">Preços<span></span></a>
+                                </li>
+                                <div class="divider"></div>
+                                <li class="list-item">
+                                    <a href="#" class="list-link entrar">Entrar<span></span></a>
+                                </li>
+                            </ul>
+                        </div><!--/ Collapse -->
+                        <img src="./img/illustration-devices.svg" class="i-dispositivos" alt="Ilustração de dispositivos">
+                    </div>
+                </div><!--/ Col 2 -->
+            </nav><!--/ Navbar -->
+        </div><!--/ Container -->
+    </header>
+    <div class="col-3"><!-- Col 3 -->
+        <div class="novo">
+            <span>Novo</span>Painel de monografia
+        </div>
+        <h1>Informações poderosas sobre sua equipe</h1>
+        <p>
+            Planejamento de projetos e acompanhamento de tempo para equipes ágeis
+        </p>
+        <div class="agenda-demo">
+            <a href="#">Agendar demo</a> <span>Para ver uma visualização ao vivo</span>
+        </div>
+    </div><!--/ Col 3 -->
+    <footer>
+        <p>
+            Desafio do <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Codificado pelo <a href="https://github.com/EdivandroLima">Edivandro Lima</a>.
+        </p>
+    </footer>
+    <script>
+        // Menu Navbar
+        function open_menu() {
+            var img= document.getElementById("img-menu");
+            var open= document.getElementById("navbar-collapse");
+            if (img.src.indexOf('icon-hamburger') != -1) {
+                open.classList.add("open-menu");
+                img.src="./img/icon-close.svg"
+            }
+            else {
+                open.classList.remove("open-menu");
+                img.src="./img/icon-hamburger.svg"
+            }
+        }
+    </script>
+</body>
+</html>
